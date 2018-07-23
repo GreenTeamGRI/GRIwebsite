@@ -1,0 +1,102 @@
+---
+layout: default
+title: PGIM Real Estate
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  </head>
+  <body>
+
+    <header class="page-header" role="banner"> 
+      <h1 class="project-name"> PGIM Real Estate: Global Reporting Initative</h1>
+      <a href="https://pgimrealestategri.github.io" class="btn"><font color="purple">Click to Return to Homepage</font></a>
+  
+      <p> If you are a Property Manager with PGIM Real Estate, you can report information about your properties: </p><br>
+      
+      <form>
+        
+        First name:<br>
+        <input type="text" name="firstname"><br>
+      
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        
+        Property Name:<br>
+        <input type="text" name="propname"><br>
+        
+        Property Address:<br>
+        <input type="text" name="propadd"><br><br>
+        
+        Is your property LEED Certified? <br>
+        <fieldset id="LEED">
+        <input type="radio" value="" name="LEED"> Yes <br>
+        <input type="radio" value="" name="LEED"> No <br>
+        </fieldset>
+      
+      </form>
+      
+      <form><br><br>
+        <p> Choose the period in which you are reporting.</p>
+        <p> If one item is daily, and another is monthly, fill out what you can daily 
+          and then fill out the form again at the end of the month. </p><br>
+        
+        <fieldset id="ReportingPeriod">
+        <input type="radio" value="Daily" name="ReportingPeriod"> Daily <br>
+        <input type="radio" value="Weekly"name="ReportingPeriod"> Weekly <br>
+        <input type="radio" value="Every Two Weeks" name="ReportingPeriod"> Every Two Weeks <br>
+        <input type="radio" value="Every Three Weeks" name="ReportingPeriod"> Every Three Weeks <br>
+        <input type="radio" value="Monthly" name="ReportingPeriod"> Monthly <br>
+        <input type="radio" value="Other" name="ReportingPeriod"> Other: <br>
+          If "Other", please specify: <br>
+          <input type="text" name="other"><br>
+    </fieldset>
+      
+    </form>
+    
+    <form> <br><br>
+      <p> Here is where you fill out what you can for the reporting period selected. </p>
+        
+      Tons of trash: <br>
+      <input type="text" name="trash"> <br> <br>
+      
+      Watts or Kilowatts of Electricity (please specify): <br>
+      <input type="text" name="electricity"> <br><br>
+      
+      Amount of water usage: <br>
+      <input type="text" name="water"> <br><br>
+      
+      Carbon emission (if any): <br>
+      <input type="text" name="carbon"> <br><br>
+      
+      Amount of paper recycled (if any): <br>
+      <input type="text" name="recycled"> <br><br>
+      
+      Amount of bottles and cans recycled (if any): <br>
+      <input type="text" name="recycle"> <br><br>
+      
+      </form>
+      
+      <form>
+        Click to submit:
+        <br> <input type="submit" value="Submit">
+      </form>
+      
+    </header>
+
+    
+    <main id="content" class="main-content" role="main">
+     
+    <a href="https://pgimrealestategri.github.io" class="btn"><font color="purple">Click to Return to Homepage</font></a>
+    <p style="text-align:center;"><img src="https://www.desantisbreindel.com/wp-content/uploads/DB-Web-Work-R2-PGIM-1-1.jpg" alt="" height="100" width="400"></p>
+      
+
+    </main>
+    
+ 
+  </body>
