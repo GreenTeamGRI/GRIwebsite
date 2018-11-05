@@ -1,0 +1,105 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <header class="page-header" role="banner">
+        <h1 class="project-name"> PGIM Real Estate: Global Reporting Initative</h1>
+        <a href="https://greenteamgri.github.io" class="btn"><font color="purple">Click to Return to Homepage</font></a>
+        <p> If you are an employee that can help contribute information
+            about the GRI, please answer any questions that you are able to: 
+        </p>
+        <form action="" method="post">
+            <head>
+                First name:<br>
+                <input style="color: green"  type="text" color="black" name="firstname"><br>
+                Last name:<br>
+                <input style="color: green"  style="color: green"  type="text" name="lastname"><br>
+                Company Name:<br>
+                <input style="color: green"  type="text" name="gri1021"><br><br>
+                Markets Served:<br>
+                <input style="color: green"  type="text" name="gri1026"><br><br>
+                Supply Chain:<br>
+                <input style="color: green"  type="text" name="gri1029"><br><br>
+                Significant changes to the organization and supply chain:<br>
+                <input style="color: green"  type="text" name="gri10210"><br><br>
+                Precautionary principle of approach:<br>
+                <input style="color: green"  type="text" name="gri10211"><br><br>
+                External initiatives:<br>
+                <input style="color: green"  type="text" name="gri10212"><br><br>
+                Membership of associations:<br>
+                <input style="color: green"  type="text" name="gri10213"><br><br>
+                Values, principles, standards, and norms of behavior:<br>
+                <input style="color: green"  type="text" name="gri10216"><br><br>
+                Governance structure:<br>
+                <input style="color: green"  type="text" name="gri10218"><br><br>
+                Collective bargaining agreements:<br>
+                <input style="color: green"  type="text" name="gri10241"><br><br>
+                Approach to stakeholder engagement:<br>
+                <input style="color: green"  type="text" name="gri10243"><br><br>
+                Entities included in the consolidated financial statements:<br>
+                <input style="color: green"  type="text" name="gri10245"><br><br>
+                Defining report content and topic Boundaries:<br>
+                <input style="color: green"  type="text" name="gri10246"><br><br>
+                List of material topics:<br>
+                <input style="color: green"  type="text" name="gri10247"><br><br>
+                Restatements of information:<br>
+                <input style="color: green"  type="text" name="gri10248"><br><br>
+                Changes in reporting:<br>
+                <input style="color: green"  type="text" name="gri10249"><br><br>
+                Reporting Period:<br>
+                <input style="color: green"  type="text" name="gri10250"><br><br>
+                Reporting Cycle:<br>
+                <input style="color: green"  type="text" name="gri10252"><br><br>
+                Contact point for questions regarding the report:<br>
+                <input style="color: green"  type="text" name="gri10253"><br><br>
+                Claims of reporting in accordance with the GRI Standards:<br>
+                <input style="color: green"  type="text" name="gri10254"><br><br>
+                GRl content index:<br>
+                <input style="color: green"  type="text" name="gri10255"><br><br>
+                Policy/practice for external assurance:<br>
+                <input style="color: green"  type="text" name="gri10256"><br><br>
+                <br><br>
+                Click to submit
+                <input style="color: green"  type="submit" value="Submit">
+        </form>
+        <br>
+        <a href="https://greenteamgri.github.io/reference" class="btn">Click here for more information about each GRI metric:</a>
+    </header>
+    <main id="content" class="main-content" role="main">
+    <a href="https://greenteamgri.github.io" class="btn"><font color="purple">Click to Return to Homepage</font></a>
+    <p style="text-align:center;"><img src="https://i2.wp.com/www.vivafrik.com/wp-content/uploads/2015/10/Global-Reporting-Initiative.jpg?fit=435%2C266&ssl=1"
+        alt="" height="100" width="400"></p>
+    </main>
+</body>
+<?php 
+    $servername = "127.0.0.1";
+    $username = "greenteam2018";
+    $password = "gricoding";
+    $dbname = "greenteamgri";
+    
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+    $table = 102;
+    $query;
+    $statement;
+    for($i = 1; $i <= 56; $i++){
+      try{
+        if(isset($_POST["gri".$table.$i])){
+          $query = "UPDATE `" . $table . "` SET `Value`='" . $_POST["gri".$table.$i] . "' WHERE `".$table."`.`"."GRINumber`='" . $i . "'";
+          $statement = $conn->prepare($query);
+          $statement->execute();
+        }
+      }catch(Exception $e){
+       
+      }
+      
+    }
+?>
